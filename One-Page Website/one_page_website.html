@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <title>Nalbinding</title>
     <link href="css/one_page_website.css" rel="stylesheet">
+    <script src="JS/one_page_website.js" defer></script>
 </head>
 <body>
     <!--NAVBAR-->
@@ -27,6 +28,75 @@
             <p>Below are images and videos of different historical examples, stitches, and contemporary pieces.</p>
         </div>
     </header>
+    <!--LIGHTBOX-->
+    <h2 style="text-align: center">Lightbox</h2>
+
+    <div class="row">
+        <div class="column">
+            <img src="coppergate.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+            <img src="hat.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+            <img src="mammen.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+            <img src="mittens.JPG" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+            <img src="socks.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+        </div>
+    </div>
+    <!--MODALS-->
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <div class="mySlides">
+                <div class="numbertext">1 / 5</div>
+                <img src="coppergate.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">2 / 5</div>
+                <img src="hat.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">3 / 5</div>
+                <img src="mammen.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">4 / 5</div>
+                <img src="mittens.JPG" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">5 / 5</div>
+                <img src="socks.jpg" style="width:100%">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+
+            <div class="column">
+                <img class="demo cursor" src="coppergate.jpg" style="width:100%" onclick="currentSlide(1)" alt="Coppergate Sock">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="hat.jpg" style="width:100%" onclick="currentSlide(2)" alt="Coppergate Sock">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="mammen.jpg" style="width:100%" onclick="currentSlide(3)" alt="Coppergate Sock">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="mittens.JPG" style="width:100%" onclick="currentSlide(4)" alt="Coppergate Sock">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="socks.jpg" style="width:100%" onclick="currentSlide(5)" alt="Coppergate Sock">
+            </div>
+        </div>
+    </div>
     <!--IMAGES-->
     <section>
         <div id="images"></div>
